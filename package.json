@@ -1,0 +1,23 @@
+{
+  "name": "node-capsule",
+  "version": "1.0.0",
+  "description": "Easy to transport.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgantche/node-capsule.git"
+  },
+  "author": "Zlatko Gantchev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zgantche/node-capsule/issues"
+  },
+  "homepage": "https://github.com/zgantche/node-capsule#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
