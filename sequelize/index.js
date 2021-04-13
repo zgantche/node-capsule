@@ -1,4 +1,5 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
+const db = {};
 
 const sequelize = new Sequelize({
     database: 'node-capsule_local',
@@ -9,13 +10,18 @@ const sequelize = new Sequelize({
 	dialect: 'postgres',
 });
 
+// const User = require('./models/user')(sequelize, DataTypes);
+// sequelize['User'] = User;
+
 const modelDefiners = [
 	// Add models here...
-	// require('./models/item'),
+    require('./models/user'),
 ];
 
 for (const modelDefiner of modelDefiners) {
-	modelDefiner(sequelize);
+	modelDefiner(sequelize, DataTypes);
 }
 
-module.exports = sequelize;
+module.exports = {
+    sequelize
+}

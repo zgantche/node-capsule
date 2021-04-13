@@ -1,4 +1,4 @@
-const { sequelize } = require('../sequelize');
+const { sequelize, User } = require('../sequelize');
 
 const getHealth = () => {
     try {
@@ -6,6 +6,8 @@ const getHealth = () => {
 
         return 'Health check successful!';
     } catch (error) {
+        console.log('db error while performing health check!')
+        console.log(error)
         //TODO: error handing
     }
 }
